@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        const testA = [[${mya}]];
+        console.log(testA);
+    </script>
+    <style>
+        .mystyle {
+            width: 100px;
+            height: 100px;
+            background-color: #ff0000;
+        }
+    </style>
+</head>
+<body>
+<p th:utext="${aa}">
+    원래문자열입니다
+</p>
+<ul>
+    <li th:each="name:${aList}">
+        [[${name}]]
+    </li>
+</ul>
+<div th:if="${myTrue}">
+    true 면 나옵니다
+</div>
+<div th:classappend="${myTrue} ? 'mystyle'" >
+</div>
+
+<div th:replace="footer::copy">
+
+</div>
+</body>
+</html>
