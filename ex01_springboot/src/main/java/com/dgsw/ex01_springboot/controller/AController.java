@@ -1,6 +1,6 @@
 package com.dgsw.ex01_springboot.controller;
 
-import com.dgsw.ex01_springboot.components.A;
+import com.dgsw.ex01_springboot.components.AComponent;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -15,17 +15,17 @@ import java.sql.SQLException;
 public class AController {
 
     @Autowired
-    A a1;
+    AComponent a1;
 
     @Autowired
-    A a2;
+    AComponent a2;
 
     @Autowired
     DataSource ds;
 
     @GetMapping("aa")
     public String aa() {
-        A a3 = new A();
+        AComponent a3 = new AComponent();
 
         System.out.println("a1 : " + a1);
         System.out.println("a2 : " + a2);

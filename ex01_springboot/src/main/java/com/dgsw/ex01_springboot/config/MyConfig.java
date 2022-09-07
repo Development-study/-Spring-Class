@@ -1,6 +1,6 @@
 package com.dgsw.ex01_springboot.config;
 
-import com.dgsw.ex01_springboot.components.B;
+import com.dgsw.ex01_springboot.components.BComponent;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -12,8 +12,8 @@ import javax.sql.DataSource;
 public class MyConfig {
 
     @Bean
-    public B b() {
-        return new B();
+    public BComponent b() {
+        return new BComponent();
     }
 
     @Bean

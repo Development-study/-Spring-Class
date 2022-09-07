@@ -1,6 +1,6 @@
 package com.dgsw.ex01_springboot;
 
-import com.dgsw.ex01_springboot.components.A;
+import com.dgsw.ex01_springboot.components.AComponent;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
@@ -13,7 +13,7 @@ public class Ex01SpringbootApplication {
 	}
 
 	@Bean
-	public A a() {
-		return new A();
+	public AComponent a() {
+		return new AComponent();
 	}
 }
