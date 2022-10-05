@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="common::html-head">
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="container">
+    <h1>findall</h1>
+    <div th:replace="common::html-nav">
+    </div>
+    <form action="delete" method="post">
+        <div>
+            <div th:each="test:${testlist}">
+                <label>
+                    <input type="checkbox" name="check" th:value="${test.idx}">
+                </label>[[${test}]]
+            </div>
+        </div>
+        <button type="submit">삭제해라</button>
+    </form>
+    <div th:replace="common::html-foot">
+    </div>
+</div>
+
+</body>
+</html>
